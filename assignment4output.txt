@@ -1,0 +1,73 @@
+
+JID   NAME                       RATE JOBDATE  
+----- -------------------- ---------- ---------
+J0001 Smith                        80 01-JUL-21
+J0004 Johnson                      90 01-OCT-21
+J0007 Johnson                      90 20-SEP-21
+J0003 Johnson                      90 01-OCT-21
+J0002 Williams                     75 15-JUL-21
+J0005 Miller                      100 25-JAN-22
+J0008 Miller                      100 01-OCT-21
+J0006 Jones                        85 25-JAN-22
+
+8 rows selected. 
+
+
+NAME                 REGION    
+-------------------- ----------
+Williams             South     
+Smith                City      
+
+
+JOBDATE   MAX(HOURS)
+--------- ----------
+01-JUL-21          5
+15-JUL-21        2.5
+20-SEP-21          4
+01-OCT-21          3
+25-JAN-22          4
+
+
+JID   WID COST               
+----- --- -------------------
+J0001 W01             $400.00
+J0004 W02             $270.00
+J0007 W02             $360.00
+J0003 W02             $270.00
+J0002 W03             $187.50
+J0005 W04             $400.00
+J0008 W04             $250.00
+J0006 W05             $127.50
+
+8 rows selected. 
+
+
+NAME        
+------------
+Carpentry
+Electrical
+Painting
+Plumbing
+
+
+NAME                 CUS JOBDATE  
+-------------------- --- ---------
+Rodriguez            C11 01-JUL-21
+Rodriguez            C11 15-JUL-21
+Wilson               C44 20-SEP-21
+
+
+WOR NAME                
+--- --------------------
+W03 Williams            
+W02 Johnson             
+
+
+CID CITY                 COUNT(JID)
+--- -------------------- ----------
+C33 Naperville                    3
+C44 Tinley Park                   2
+C11 Chicago                       2
+C22 Evanston                      1
+C55 Bensenville                   0
+

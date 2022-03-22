@@ -1,0 +1,62 @@
+
+INSURANCE           
+--------------------
+Aetna
+Blue Cross
+Humana
+
+
+NAME                     CITY                    
+------------------------ ------------------------
+Secular General          Chicago                 
+Northwest Side           Chicago                 
+Local County             Chicago                 
+Saint Kildare            Oak Lawn                
+Saint Welby              Wheaton                 
+
+
+PATI
+----
+P222
+P111
+P555
+P111
+
+
+NAME                
+--------------------
+Simmons, Sue
+Shah, Sue
+Xu, Sue
+
+
+CITY                     COUNT(CITY)
+------------------------ -----------
+Chicago                            3
+Oak Lawn                           1
+Wheaton                            1
+
+
+PATI SUM(CHARGE)
+---- -----------
+P111         700
+P333         750
+P666        1500
+P555        2000
+P222        2500
+P444        3700
+
+6 rows selected. 
+
+
+ADMITDATE COUNT(ADMITDATE)
+--------- ----------------
+02-MAR-19                3
+
+
+NAME                     CITY                         CHARGE
+------------------------ ------------------------ ----------
+Saint Welby              Wheaton                        1000
+Saint Welby              Wheaton                        1950
+Saint Kildare            Oak Lawn                        750
+

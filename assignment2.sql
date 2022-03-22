@@ -1,0 +1,55 @@
+/*
+Michael Placzek
+CSC 355 Section 531
+Assignment 2
+1/16, 2022
+*/
+
+-- Drop any existing table
+DROP TABLE SHIPMENT;
+DROP TABLE DRIVER;
+DROP TABLE VAN;
+
+-- Create table
+CREATE TABLE VAN (
+    VID     CHAR(3) PRIMARY KEY,
+    Make    VARCHAR(6),
+    Model   VARCHAR(6)
+);
+
+CREATE TABLE DRIVER (
+    DID         CHAR(4) PRIMARY KEY,
+    City        VARCHAR(11),
+    VanID       CHAR(3) REFERENCES VAN(VID),
+    MaxHours    NUMBER(2,0) CHECK (MaxHours  > 0)
+);
+    
+CREATE TABLE SHIPMENT (
+    DriverID        CHAR(4) REFERENCES DRIVER(DID),
+    RouteID         CHAR(6),
+    DepartureDate   DATE,
+    
+    PRIMARY KEY (DriverID, RouteID)
+);
+
+-- Populate table
+INSERT INTO VAN VALUES ( 'V12', 'Toyota', 'Camry' );
+INSERT INTO VAN VALUES ( 'V29', 'Nissan', 'Sentra' );
+INSERT INTO VAN VALUES ( 'V40', 'Ford', 'GT' );
+
+INSERT INTO DRIVER VALUES ( 'DC11', 'Chicago', 'V12', 60 );
+INSERT INTO DRIVER VALUES ( 'DC23', 'Chicago', 'V12', 65 );
+INSERT INTO DRIVER VALUES ( 'DL01', 'Los Angeles', 'V29', 40 );
+INSERT INTO DRIVER VALUES ( 'DL54', 'Los Angeles', 'V40', 40 );
+
+INSERT INTO SHIPMENT VALUES ( 'DC11', '669001', DATE '2021-09-01' );
+INSERT INTO SHIPMENT VALUES ( 'DC23', '122755', DATE '2021-09-05' );
+INSERT INTO SHIPMENT VALUES ( 'DL54', '383277', DATE '2021-09-20' );
+INSERT INTO SHIPMENT VALUES ( 'DL01', '669002', DATE '2021-10-01' );
+INSERT INTO SHIPMENT VALUES ( 'DL01', '669003', DATE '2021-10-06' );
+
+SELECT * FROM SHIPMENT;
+SELECT * FROM DRIVER;
+SELECT * FROM VAN;
+
+COMMIT;

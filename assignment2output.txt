@@ -1,0 +1,81 @@
+
+Table SHIPMENT dropped.
+
+
+Table DRIVER dropped.
+
+
+Table VAN dropped.
+
+
+Table VAN created.
+
+
+Table DRIVER created.
+
+
+Table SHIPMENT created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+DRIV ROUTEI DEPARTURE
+---- ------ ---------
+DC11 669001 01-SEP-21
+DC23 122755 05-SEP-21
+DL54 383277 20-SEP-21
+DL01 669002 01-OCT-21
+DL01 669003 06-OCT-21
+
+
+DID  CITY        VAN   MAXHOURS
+---- ----------- --- ----------
+DC11 Chicago     V12         60
+DC23 Chicago     V12         65
+DL01 Los Angeles V29         40
+DL54 Los Angeles V40         40
+
+
+VID MAKE   MODEL 
+--- ------ ------
+V12 Toyota Camry 
+V29 Nissan Sentra
+V40 Ford   GT    
+
+
+Commit complete.
+
